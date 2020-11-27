@@ -1,0 +1,37 @@
+{% if schools | length > 0 %}
+    <span class="govuk-body">{{ schools | length }} result(s) found</span>
+    <hr/>
+{% endif %}
+{% for school in schools %}
+    <div class="card">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+                <h3 class="govuk-heading-m">{{ school.name }}</h3>
+            </div>
+            <div class="govuk-grid-column-one-half">
+                {% if school.alreadyPartnered %}
+                    <strong class="govuk-tag tag-right">
+                        Already Partnered
+                    </strong>
+                {% endif %}
+                {% if school.partnershipConfirmed %}
+                    <strong class="govuk-tag govuk-tag--green tag-right">
+                        Partnership Confirmed
+                    </strong>
+                {% endif %}
+            </div>
+        </div>
+        <p>{{ school.address }}</p>
+        <p>URN: {{ school.urn }}</p>
+        <p>Phase/Type: {{ school.phaseDisplay }}, {{ school.typeDisplay }}</p>
+        {% if school.pupilPremium %}
+            <p>Pupil premium above 40%</p>
+        {% endif %}
+        {% if school.rural %}
+            <p>Located in top 20% remotest areas</p>
+        {% endif %}
+        <hr/>
+    </div>
+{% else %}
+    <p>No results found</p>
+{% endfor %}
