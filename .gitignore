@@ -11,3 +11,6 @@ public
 node_modules/*
 .tmuxp.*
 package-lock.json
+
+# jetbrains IDE files
+.idea
