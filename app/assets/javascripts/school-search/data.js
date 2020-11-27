@@ -1,6 +1,6 @@
 export const allSchools = [
   {
-    urn: 123456,
+    urn: '123456',
     name: 'Corfe Hills School',
     address: 'Higher Blandford Road, Broadstone, Dorset, BH18 9BG',
     phase: 'secondary',
@@ -13,7 +13,7 @@ export const allSchools = [
     partnershipConfirmed: false
   },
   {
-    urn: 123456,
+    urn: '123456',
     name: 'Rural school',
     address: 'Higher Blandford Road, Broadstone, Dorset, BH18 9BG',
     phase: 'secondary',
@@ -26,7 +26,7 @@ export const allSchools = [
     partnershipConfirmed: false
   },
   {
-    urn: 123456,
+    urn: '123456',
     name: 'Pupil Premium School',
     address: 'Higher Blandford Road, Broadstone, Dorset, BH18 9BG',
     phase: 'secondary',
@@ -39,7 +39,7 @@ export const allSchools = [
     partnershipConfirmed: false
   },
   {
-    urn: 123456,
+    urn: '123456',
     name: 'Rural PP School',
     address: 'Higher Blandford Road, Broadstone, Dorset, BH18 9BG',
     phase: 'secondary',
@@ -52,7 +52,7 @@ export const allSchools = [
     partnershipConfirmed: true
   },
   {
-    urn: 123456,
+    urn: '123456',
     name: 'Corfe Hills School',
     address: 'Higher Blandford Road, Broadstone, Dorset, BH18 9BG',
     phase: 'secondary',
@@ -65,7 +65,7 @@ export const allSchools = [
     partnershipConfirmed: false
   },
   {
-    urn: 123456,
+    urn: '123456',
     name: 'School With A Very Very Very Very Very Very Very Long Name',
     address: 'Higher Blandford Road, Broadstone, Dorset, BH18 9BG',
     phase: 'secondary',
@@ -83,14 +83,14 @@ export const allMats = [
   {
     name: 'MAT1',
     id: 'TR1234',
-    uid: 123456,
+    uid: '123456',
     members: 5,
     partnered: false
   },
   {
     name: 'MAT2',
     id: 'TR1234',
-    uid: 123456,
+    uid: '123456',
     members: 5,
     partnered: true
   }
