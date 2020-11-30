@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="public/stylesheets/school-search.css"/>
+    <script src="/public/javascripts/nunjucks-slim.min.js"></script>
+    <script src="/public/javascripts/school-search/school-search.js" type="module"></script>
+    <script src="/public/javascripts/school-search/mat-search.js" type="module"></script>
+    <script src="/public/templates/school-results.js"></script>
+    <script src="/public/templates/mat-results.js"></script>
+{% endblock %}
+
+{% block pageTitle %}
+    Find Schools
+{% endblock %}
+
+{% block beforeContent %}
+    {{ govukPhaseBanner({
+        tag: {
+            text: "prototype"
+        },
+        html: 'This is a new service – your feedback will help us to improve it.'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+            <h1 class="govuk-heading-xl">Find eligible schools for the Early Career Framework</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+        </div>
+    </div>
+    {% set schoolTab %}
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <div style="width: 100%; height: 100%; background-color: #dee0e2; padding: 8px;">
+                    {% include "school-search/partials/filter-schools.html" %}
+                </div>
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+                <div id="school-results"></div>
+            </div>
+        </div>
+    {% endset -%}
+
+    {% set matTab %}
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <div style="width: 100%; height: 100%; background-color: #dee0e2; padding: 8px;">
+                    {% include "school-search/partials/filter-mats.html" %}
+                </div>
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+                <div id="mat-results"></div>
+            </div>
+        </div>
+    {% endset -%}
+
+    {{ govukTabs({
+        items: [
+            {
+                label: "School",
+                id: "school-tab",
+                panel: { html: schoolTab }
+            },
+            {
+                label: "Multi-academy trust",
+                id: "mat-tab",
+                panel: { html: matTab }
+            }
+        ]
+    }) }}
+
+{% endblock %}

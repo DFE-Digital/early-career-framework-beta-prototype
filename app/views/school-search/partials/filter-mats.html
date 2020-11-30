@@ -1,0 +1,68 @@
+<h2 class="govuk-heading-m">Filter MATs</h2>
+{{ govukButton({
+    text: "Apply filters",
+    name: "apply-mat-filters"
+}) }}
+
+{{ govukInput({
+    label: {
+        text: "MAT name",
+        classes: "govuk-label--s",
+        isPageHeading: false
+    },
+    id: "group-name",
+    name: "group-name"
+}) }}
+
+{{ govukInput({
+    label: {
+        text: "Location",
+        classes: "govuk-label--s",
+        isPageHeading: false
+    },
+    hint: {
+        text: "Enter a postcode, town or region"
+    },
+    id: "mat-location-name",
+    name: "mat-location-name"
+}) }}
+
+{{ govukSelect({
+    id: "mat-search-distance-quantity",
+    name: "mat-search-distance-quantity",
+    hint: {
+        text: "Search distance"
+    },
+    items: [{
+        value: "50",
+        text: "50"
+    }]
+}) }}
+
+{{ govukSelect({
+    id: "mat-search-distance-units",
+    name: "mat-search-distance-units",
+    items: [
+        {
+            value: "miles",
+            text: "miles"
+        }]
+}) }}
+
+{{ govukCheckboxes({
+    idPrefix: "status",
+    name: "status",
+    fieldset: {
+        legend: {
+            text: "Partnership Status",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--s"
+        }
+    },
+    items: [
+        {
+            value: "status",
+            text: "Show MATs that are already partnered"
+        }
+    ]
+}) }}

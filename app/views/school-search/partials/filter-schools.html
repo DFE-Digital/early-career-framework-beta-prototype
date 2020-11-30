@@ -1,0 +1,169 @@
+<h2 class="govuk-heading-m">Filter Schools</h2>
+{{ govukButton({
+    text: "Apply filters",
+    name: "apply-school-filters"
+}) }}
+
+{{ govukInput({
+    label: {
+        text: "School name",
+        classes: "govuk-label--s",
+        isPageHeading: false
+    },
+    id: "school-name",
+    name: "school-name"
+}) }}
+
+{{ govukInput({
+    label: {
+        text: "Location",
+        classes: "govuk-label--s",
+        isPageHeading: false
+    },
+    hint: {
+        text: "Enter a postcode, town or region"
+    },
+    id: "school-location-name",
+    name: "school-location-name"
+}) }}
+
+{{ govukSelect({
+    id: "school-search-distance-quantity",
+    name: "school-search-distance-quantity",
+    hint: {
+        text: "Search distance"
+    },
+    items: [{
+        value: "50",
+        text: "50"
+    }]
+}) }}
+
+{{ govukSelect({
+    id: "school-search-distance-units",
+    name: "school-search-distance-units",
+    items: [
+        {
+            value: "miles",
+            text: "miles"
+        }]
+}) }}
+
+{{ govukCheckboxes({
+    idPrefix: "characteristic",
+    name: "characteristic",
+    fieldset: {
+        legend: {
+            text: "Characteristic",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--s"
+        }
+    },
+    items: [
+        {
+            value: "pupil-premium",
+            text: "Pupil premium above 40%"
+        },
+        {
+            value: "rural",
+            text: "Located in top 20% remotest areas"
+        }
+    ]
+}) }}
+
+{{ govukCheckboxes({
+    idPrefix: "phase",
+    name: "phase",
+    fieldset: {
+        legend: {
+            text: "Phase",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--s"
+        }
+    },
+    items: [
+        {
+            value: "nursery",
+            text: "Nursery"
+        },
+        {
+            value: "primary",
+            text: "Primary"
+        },
+        {
+            value: "secondary",
+            text: "Secondary"
+        },
+        {
+            value: "middle",
+            text: "Middle"
+        },
+        {
+            value: "sixth-form-fe",
+            text: "Sixth form and FE"
+        }
+    ]
+}) }}
+
+{{ govukCheckboxes({
+    idPrefix: "school-type",
+    name: "school-type",
+    fieldset: {
+        legend: {
+            text: "Type",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--s"
+        }
+    },
+    items: [
+        {
+            value: "academy",
+            text: "Academy"
+        },
+        {
+            value: "maintained",
+            text: "Maintained"
+        },
+        {
+            value: "free-school",
+            text: "Free School"
+        },
+        {
+            value: "special",
+            text: "Special"
+        },
+        {
+            value: "other",
+            text: "Other"
+        }
+    ]
+}) }}
+
+{{ govukCheckboxes({
+    idPrefix: "partnership-status",
+    name: "partnership-status",
+    fieldset: {
+        legend: {
+            text: "Partnership Status",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--l"
+        }
+    },
+    hint: {
+        text: "Select all that apply."
+    },
+    items: [
+        {
+            value: "",
+            text: "Show schools partnered another provider"
+        },
+        {
+            value: "",
+            text: "Show our pending partnerships"
+        },
+        {
+            value: "",
+            text: "Show our confirmed partnerships"
+        }
+    ]
+}) }}
