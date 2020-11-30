@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Declare a partnership with a school
+{% endblock %}
+
+{% block beforeContent %}
+    {{ govukBackLink({
+        text: "Back",
+        href: "/declare-partnership"
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div style="  border: 4px solid #00703c;padding: 20px;margin-top: 0; margin-bottom: 40px">
+                <p class="govuk-heading-m">School added</p>
+                <p style="color: #00703c"><strong>Your partnership with {{ data["declare-partnership-school-name"] }}
+                        has been submitted to DfE</strong></p>
+            </div>
+
+            <div class="govuk-grid-row">
+                <h1 class="govuk-heading-xl">
+                    Add new partnerships
+                </h1>
+                {{ govukWarningText({
+                    text: "You should only add a school to your list if they have signed a partnership contract with you",
+                    iconFallbackText: "Warning"
+                }) }}
+                {{ govukInput({
+                    label: {
+                        text: "School name",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                    }
+                }) }}
+                {{ govukInput({
+                    label: {
+                        text: "School URN",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                    }
+                }) }}
+                {{ govukInput({
+                    label: {
+                        text: "Point of contact name",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                    }
+                }) }}
+                {{ govukInput({
+                    label: {
+                        text: "Point of contact email address",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                    }
+                }) }}
+                <div class="govuk-grid-row" style="margin: 0">
+                    {{ govukInput({
+                        label: {
+                            text: "Estimated ECTs for 2021",
+                            classes: "govuk-label--s",
+                            isPageHeading: false
+                        },
+                        formGroup: { classes: "govuk-grid-column-one-quarter" }
+                    }) }}
+                </div>
+
+                {{ govukRadios({
+                    fieldset: {
+                        legend: {
+                            text: "Assign delivery partner to school",
+                            isPageHeading: false,
+                            classes: "govuk-fieldset__legend--s"
+                        }
+                    },
+                    items: [
+                        {
+                            value: "1",
+                            text: "One",
+                            hint: { text: "Details" }
+                        },
+                        {
+                            value: "2",
+                            text: "Two",
+                            hint: { text: "Details" }
+                        },
+                        {
+                            value: "3",
+                            text: "Three",
+                            hint: { text: "Details" }
+                        }
+                    ]
+                }) }}
+                {{ govukButton({
+                    text: "Add school",
+                    href: "/"
+                }) }}
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
