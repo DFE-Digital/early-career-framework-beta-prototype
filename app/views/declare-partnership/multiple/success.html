@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Upload schools
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            {{ govukPanel({
+                titleText: "Upload Successful",
+                html: "<strong>58</strong> school partnerships have been submitted to DfE"
+            }) }}
+
+            {% set uploadedTable %}
+            {{ govukTable({
+                firstCellIsHeader: false,
+                head: [
+                    {
+                        text: "School name"
+                    },
+                    {
+                        text: "School URN"
+                    }
+                ],
+                rows: [
+                    [
+                        {
+                            text: "School 1"
+                        },
+                        {
+                            text: "0123456"
+                        }
+                    ],
+                    [
+                        {
+                            text: "School 2"
+                        },
+                        {
+                            text: "0123456"
+                        }
+                    ]
+                ]
+            }) }}
+            {% endset -%}
+            <h2 class="govuk-heading-m">Schools uploaded</h2>
+            {{ govukDetails({
+                summaryText: "Show all 58 schools",
+                html: uploadedTable
+            }) }}
+            <h2 class="govuk-heading-m">What happens next</h2>
+            <p>The department for Education will now hget in contact with these schools so that they can confirm your partnership.</p>
+            <p>You can find out whether these schools have confirmed your partnership on <a href="#">your dashboard</a>. We recommend that you prompt
+            a school if they take more than a week to confirm the relationship.</p>
+        </div>
+    </div>
+
+{% endblock %}
