@@ -19,6 +19,11 @@
                         Partnership Confirmed
                     </strong>
                 {% endif %}
+                {% if school.partnershipPending %}
+                <strong class="govuk-tag govuk-tag--yellow tag-right">
+                    Partnership Confirmed
+                </strong>
+                {% endif %}
             </div>
         </div>
         <p>{{ school.address }}</p>
