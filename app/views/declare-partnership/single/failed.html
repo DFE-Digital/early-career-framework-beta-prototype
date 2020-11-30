@@ -14,118 +14,116 @@
 {% block content %}
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <div class="govuk-grid-row">
-                <h1 class="govuk-heading-xl">
-                    Add new partnerships
-                </h1>
-                {{ govukWarningText({
-                    text: "You should only add a school to your list if they have signed a partnership contract with you",
-                    iconFallbackText: "Warning"
-                }) }}
-                {{ govukErrorSummary({
-                    titleText: "There is a problem",
-                    errorList: [
-                        {
-                            text: "Error 1",
-                            href: "#school-name"
-                        },
-                        {
-                            text: "Error 2",
-                            href: "#school-urn"
-                        }
-                    ]
-                }) }}
+            <h1 class="govuk-heading-xl">
+                Add new partnerships
+            </h1>
+            {{ govukWarningText({
+                text: "You should only add a school to your list if they have signed a partnership contract with you",
+                iconFallbackText: "Warning"
+            }) }}
+            {{ govukErrorSummary({
+                titleText: "There is a problem",
+                errorList: [
+                    {
+                        text: "Error 1",
+                        href: "#school-name"
+                    },
+                    {
+                        text: "Error 2",
+                        href: "#school-urn"
+                    }
+                ]
+            }) }}
+            {{ govukInput({
+                id: "school-name",
+                value: data["declare-partnership-school-name"],
+                label: {
+                    text: "School name",
+                    classes: "govuk-label--s",
+                    isPageHeading: false
+                },
+                errorMessage: { text: "Error message" }
+            }) }}
+            {{ govukInput({
+                id: "school-urn",
+                value: data["declare-partnership-school-urn"],
+                label: {
+                    text: "School URN",
+                    classes: "govuk-label--s",
+                    isPageHeading: false
+                },
+                errorMessage: { text: "Error message" }
+            }) }}
+            {{ govukInput({
+                id: "poc-name",
+                value: data["declare-partnership-poc-name"],
+                label: {
+                    text: "Point of contact name",
+                    classes: "govuk-label--s",
+                    isPageHeading: false
+                },
+                errorMessage: { text: "Error message" }
+            }) }}
+            {{ govukInput({
+                id: "poc-email",
+                value: data["declare-partnership-poc-email"],
+                label: {
+                    text: "Point of contact email address",
+                    classes: "govuk-label--s",
+                    isPageHeading: false
+                },
+                errorMessage: { text: "Error message" }
+            }) }}
+            <div class="govuk-grid-row" style="margin: 0">
                 {{ govukInput({
-                    id: "school-name",
-                    value: data["declare-partnership-school-name"],
+                    id: "ect-num",
                     label: {
-                        text: "School name",
+                        text: "Estimated ECTs for 2021",
                         classes: "govuk-label--s",
                         isPageHeading: false
                     },
+                    value: data["declare-partnership-ECT-num"],
+                    formGroup: { classes: "govuk-grid-column-one-quarter" },
                     errorMessage: { text: "Error message" }
                 }) }}
-                {{ govukInput({
-                    id: "school-urn",
-                    value: data["declare-partnership-school-urn"],
-                    label: {
-                        text: "School URN",
-                        classes: "govuk-label--s",
-                        isPageHeading: false
-                    },
-                    errorMessage: { text: "Error message" }
-                }) }}
-                {{ govukInput({
-                    id: "poc-name",
-                    value: data["declare-partnership-poc-name"],
-                    label: {
-                        text: "Point of contact name",
-                        classes: "govuk-label--s",
-                        isPageHeading: false
-                    },
-                    errorMessage: { text: "Error message" }
-                }) }}
-                {{ govukInput({
-                    id: "poc-email",
-                    value: data["declare-partnership-poc-email"],
-                    label: {
-                        text: "Point of contact email address",
-                        classes: "govuk-label--s",
-                        isPageHeading: false
-                    },
-                    errorMessage: { text: "Error message" }
-                }) }}
-                <div class="govuk-grid-row" style="margin: 0">
-                    {{ govukInput({
-                        id: "ect-num",
-                        label: {
-                            text: "Estimated ECTs for 2021",
-                            classes: "govuk-label--s",
-                            isPageHeading: false
-                        },
-                        value: data["declare-partnership-ECT-num"],
-                        formGroup: { classes: "govuk-grid-column-one-quarter" },
-                        errorMessage: { text: "Error message" }
-                    }) }}
-                </div>
-
-                {{ govukRadios({
-                    id: "dp",
-                    fieldset: {
-                        legend: {
-                            text: "Assign delivery partner to school",
-                            isPageHeading: false,
-                            classes: "govuk-fieldset__legend--s"
-                        }
-                    },
-                    errorMessage: { text: "Error message" },
-                    items: [
-                        {
-                            value: "1",
-                            text: "One",
-                            hint: { text: "Details" },
-                            checked: data["declare-partnership-dp-name"] == "1"
-                        },
-                        {
-                            value: "2",
-                            text: "Two",
-                            hint: { text: "Details" },
-                            checked: data["declare-partnership-dp-name"] == "2"
-                        },
-                        {
-                            value: "3",
-                            text: "Three",
-                            hint: { text: "Details" },
-                            checked: data["declare-partnership-dp-name"] == "3"
-                        }
-                    ]
-                }) }}
-                {{ govukButton({
-                    text: "Add school",
-                    href: "/declare-partnership/single/success"
-                }) }}
-
             </div>
+
+            {{ govukRadios({
+                id: "dp",
+                fieldset: {
+                    legend: {
+                        text: "Assign delivery partner to school",
+                        isPageHeading: false,
+                        classes: "govuk-fieldset__legend--s"
+                    }
+                },
+                errorMessage: { text: "Error message" },
+                items: [
+                    {
+                        value: "1",
+                        text: "One",
+                        hint: { text: "Details" },
+                        checked: data["declare-partnership-dp-name"] == "1"
+                    },
+                    {
+                        value: "2",
+                        text: "Two",
+                        hint: { text: "Details" },
+                        checked: data["declare-partnership-dp-name"] == "2"
+                    },
+                    {
+                        value: "3",
+                        text: "Three",
+                        hint: { text: "Details" },
+                        checked: data["declare-partnership-dp-name"] == "3"
+                    }
+                ]
+            }) }}
+            {{ govukButton({
+                text: "Add school",
+                href: "/declare-partnership/single/success"
+            }) }}
+
         </div>
     </div>
 
