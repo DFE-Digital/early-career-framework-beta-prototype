@@ -1,4 +1,4 @@
-import { allSchools } from './data.js'
+import { allSchools, allSchoolsWithSuccess } from './data.js'
 
 const prevOnload = window.onload
 window.onload = () => {
@@ -19,7 +19,7 @@ function applyFiltering () {
 }
 
 function filteredSchools () {
-  let schools = allSchools
+  let schools = getAllSchools()
   if (getName().length > 0) {
     schools = filterName(schools, getName())
   }
@@ -36,6 +36,13 @@ function filteredSchools () {
 
   return schools
 }
+
+function getAllSchools(){
+  const isSuccessJourney = window.location.href.includes("success-journey")
+
+  return isSuccessJourney ? allSchoolsWithSuccess : allSchools
+}
+
 
 function getName () {
   return document.getElementById('school-name').value
