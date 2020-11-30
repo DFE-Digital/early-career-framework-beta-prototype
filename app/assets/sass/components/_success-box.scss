@@ -1,0 +1,14 @@
+.success-box {
+  border: 4px solid govuk-colour("green");
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  p.govuk-heading-m {
+    color: $govuk-text-colour;
+  }
+
+  p {
+    color: govuk-colour("green");
+  }
+}
