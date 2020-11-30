@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+    <script src="/public/javascripts/csv-upload/csv-upload.js"></script>
+{% endblock %}
+
+{% block pageTitle %}
+    Upload schools
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">
+                Upload schools
+            </h1>
+            {{ govukWarningText({
+                text: "You should only add a school to your list if they have signed a partnership contract with you",
+                iconFallbackText: "Warning"
+            }) }}
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                esse
+                cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <p>
+                Please ensure that you CSV is complete with th following data fields
+            </p>
+            <ul>
+                <li class="govuk-body-s" style="margin: 0">school URN</li>
+                <li class="govuk-body-s" style="margin: 0">school name</li>
+                <li class="govuk-body-s" style="margin: 0">school address</li>
+                <li class="govuk-body-s" style="margin: 0">school point of contact name</li>
+                <li class="govuk-body-s" style="margin: 0">school point of contact email address</li>
+                <li class="govuk-body-s" style="margin: 0">estimated number of ECTs</li>
+                <li class="govuk-body-s" style="margin: 0">assigned delivery partner</li>
+            </ul>
+            {{ govukFileUpload({
+                id: "file-upload-1",
+                name: "file-upload-1",
+                label: {
+                    text: "Upload a file"
+                }
+            }) }}
+
+            <p id="loading-message"></p>
+            <button class="govuk-button" id="upload-button">Upload CSV</button>
+        </div>
+    </div>
+
+{% endblock %}

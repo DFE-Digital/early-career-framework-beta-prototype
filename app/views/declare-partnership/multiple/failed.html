@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Upload schools
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">
+                Upload schools
+            </h1>
+            {{ govukWarningText({
+                text: "You should only add a school to your list if they have signed a partnership contract with you",
+                iconFallbackText: "Warning"
+            }) }}
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                esse
+                cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <p>
+                Please ensure that you CSV is complete with th following data fields
+            </p>
+            <ul>
+                <li>school URN</li>
+                <li>school name</li>
+                <li>school address</li>
+                <li>school point of contact name</li>
+                <li>school point of contact email address</li>
+                <li>estimated number of ECTs</li>
+                <li>assigned delivery partner</li>
+            </ul>
+            <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1"
+                 data-module="govuk-error-summary">
+                <h2 class="govuk-error-summary__title" id="error-summary-title">
+                    There is a problem
+                </h2>
+                <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                        <li>
+                            The CSV you uploaded had 23 errors, including:
+                            <ul>
+                                <li>Missing school URN on row 1</li>
+                                <li>Missing school name on row 12</li>
+                                <li>School name and URN did not match on row 13</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {{ govukFileUpload({
+                id: "file-upload-1",
+                name: "file-upload-1",
+                label: {
+                    text: "Upload a file"
+                },
+                errorMessage: { text: "error message" }
+            }) }}
+
+            {{ govukButton({
+                text: "Add school",
+                href: "/declare-partnership/multiple/success"
+            }) }}
+        </div>
+    </div>
+
+{% endblock %}
