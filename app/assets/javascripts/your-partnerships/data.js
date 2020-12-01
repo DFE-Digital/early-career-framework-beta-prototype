@@ -6,9 +6,57 @@ export const partneredSchools = [
   },
 
   {
-    name: 'Harris Academy Tottenham',
-    urn: '140935',
+    name: 'Broadstone Middle School',
+    urn: '141184',
     partnershipStatus: 'pending',
+  },
+
+  {
+    name: "Rushmoor School",
+    urn: "124476",
+    partnershipStatus: "pending"
+  },
+
+  {
+    name: "Rushcombe First School",
+    urn: "145857",
+    partnershipStatus: "pending"
+  },
+
+  {
+    name: "Lockyers Middle School",
+    urn: "123456",
+    partnershipStatus: "pending"
+  },
+
+  {
+    name: "Springdale First School",
+    urn: "529728",
+    partnershipStatus: "pending"
+  },
+
+  {
+    name: "Parkstone Grammar School",
+    urn: "123456",
+    partnershipStatus: "pending"
+  },
+
+  {
+    name: "Archbishop Tenison's School",
+    urn: "145857",
+    partnershipStatus: "pending"
+  },
+
+  {
+    name: "Millbank Academy",
+    urn: "138683",
+    partnershipStatus: "pending"
+  },
+
+  {
+    name: "City of Leeds School",
+    urn: "127954",
+    partnershipStatus: "pending"
   },
 
   {
