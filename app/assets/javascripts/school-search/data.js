@@ -27,7 +27,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: false,
-    website: "www.example.com"
+    website: "www.cncs.co.uk"
   },
   {
     urn: '138562',
@@ -42,7 +42,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: false,
-    website: "www.example.com"
+    website: "www.kingswarrington.com"
   },
   {
     urn: '140935',
@@ -57,7 +57,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: true,
-    website: "www.example.com"
+    website: "www.harristottenham.org.uk"
   },
   {
     urn: '138312',
@@ -72,7 +72,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: true,
     partnershipConfirmed: false,
-    website: "www.example.com"
+    website: "www.wcsch.com"
   },
   {
     urn: '101122',
@@ -87,7 +87,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: true,
-    website: "www.example.com"
+    website: "burdettcoutts.co.uk"
   },
   {
     urn: '121482',
@@ -102,7 +102,7 @@ export const allSchools = [
     rural: true,
     alreadyPartnered: false,
     partnershipConfirmed: false,
-    website: "www.example.com"
+    website: "b-a-wb.co.uk"
   },
   {
     urn: '117888',
@@ -117,7 +117,7 @@ export const allSchools = [
     rural: true,
     alreadyPartnered: true,
     partnershipConfirmed: false,
-    website: "www.example.com"
+    website: "anlabyacreheads.org.uk"
   },
 
   {
@@ -133,6 +133,6 @@ export const allSchools = [
     rural: true,
     alreadyPartnered: false,
     partnershipConfirmed: false,
-    website: "www.example.com"
+    website: "www.charlesdickens.southwark.sch.uk/"
   },
 ];
