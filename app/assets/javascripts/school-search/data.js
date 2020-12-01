@@ -12,6 +12,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: false,
+    website: "www.example.com"
   },
   {
     urn: '111456',
@@ -26,6 +27,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: false,
+    website: "www.example.com"
   },
   {
     urn: '138562',
@@ -40,6 +42,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: false,
+    website: "www.example.com"
   },
   {
     urn: '140935',
@@ -54,6 +57,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: true,
+    website: "www.example.com"
   },
   {
     urn: '138312',
@@ -68,6 +72,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: true,
     partnershipConfirmed: false,
+    website: "www.example.com"
   },
   {
     urn: '101122',
@@ -82,6 +87,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: true,
+    website: "www.example.com"
   },
   {
     urn: '121482',
@@ -96,6 +102,7 @@ export const allSchools = [
     rural: true,
     alreadyPartnered: false,
     partnershipConfirmed: false,
+    website: "www.example.com"
   },
   {
     urn: '117888',
@@ -110,22 +117,6 @@ export const allSchools = [
     rural: true,
     alreadyPartnered: false,
     partnershipConfirmed: false,
+    website: "www.example.com"
   },
 ];
-
-export const allMats = [
-  {
-    name: 'Corfe Hills School Academy Trust',
-    id: 'TR00577',
-    uid: '2786',
-    members: 1,
-    partnered: false,
-  },
-  {
-    name: 'Harris Federation',
-    id: 'TR00968',
-    uid: '3320',
-    members: 5,
-    partnered: true
-  }
-]
