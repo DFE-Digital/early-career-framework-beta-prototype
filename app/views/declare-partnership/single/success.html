@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-    Declare a partnership with a school
+    Add new school
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,16 +16,14 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             {{ govukPanel({
-                titleText: "Upload Successful",
-                html: "Your partnership with " + data["declare-partnership-school-name"] + " has been submitted to DfE"
+                titleText: "School added",
+                html: "Details of your school contract " + data["declare-partnership-school-name"] + " have been submitted to DfE"
             }) }}
 
             <h2 class="govuk-heading-m">What happens next</h2>
-            <p>The department for Education will now get in contact with this school so that they can confirm your
-                partnership.</p>
-            <p>You can find out whether this schools have confirmed your partnership on
-                <a href="/declare-partnership/multiple/success-journey/supplier-landing">your dashboard</a>.
-                We recommend that you prompt a school if they take more than a week to confirm the relationship.</p>
+            <p>DfE will contact these schools to confirm your contract.</p>
+            <p>Your school contracts will update immediately. You will see that schools are confirmed or they are still 'pending' (they need to confirm).
+              We recommend that you remind schools to confirm your contract as soon as possible.</p>
 
             <div>
                 {{ govukButton({
@@ -33,7 +31,7 @@
                     href: "./repeat"
                 }) }}
                 <span class="govuk-body govuk-!-margin-left-3">or
-                    <a href="/declare-partnership/multiple/success-journey/supplier-landing">finish adding schools</a>
+                    <a href="/declare-partnership/multiple/success-journey/supplier-landing">See your contracts</a>
                 </span>
             </div>
         </div>
