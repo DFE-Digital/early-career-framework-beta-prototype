@@ -19,10 +19,16 @@
                         Partnership Confirmed
                     </strong>
                 {% endif %}
+                {% if school.partnershipPending %}
+                <strong class="govuk-tag govuk-tag--yellow tag-right">
+                    Partnership Pending
+                </strong>
+                {% endif %}
             </div>
         </div>
         <p>{{ school.address }}</p>
         <p>URN: {{ school.urn }}</p>
+        <p>Network: {{  school.network  }}</p>
         <p>Phase/Type: {{ school.phaseDisplay }}, {{ school.typeDisplay }}</p>
         {% if school.pupilPremium %}
             <p>Pupil premium above 40%</p>
