@@ -1,4 +1,4 @@
-import { partneredSchools } from './data.js'
+import { partneredSchools, partneredSchoolsWithSuccess } from './data.js'
 
 window.onload = () => {
   setupEventListeners()
@@ -6,23 +6,33 @@ window.onload = () => {
 }
 
 function setupEventListeners () {
-  document.getElementById("sort").onchange = updateTable
+  document.getElementById('sort').onchange = updateTable
 }
 
 function updateTable () {
-  const tableBodyHtml = window.nunjucks.render('partnership-table-rows.html', { rows: sortedRows() })
+  const tableBodyHtml = window.nunjucks.render('partnership-table-rows.html', {
+    rows: sortedRows(),
+  })
   document.getElementById('partnership-table-body').innerHTML = tableBodyHtml
 }
 
 function sortedRows () {
+  const arePartneredSchools = getPartnerships()
+
   switch (getSortBy()) {
     case 'schoolName':
-      return sortBySchoolName(partneredSchools)
+      return sortBySchoolName(arePartneredSchools)
     case 'dateAdded':
-      return sortByDateAdded(partneredSchools)
+      return sortByDateAdded(arePartneredSchools)
     case 'partnershipStatus':
-      return sortByPartnershipStatus(partneredSchools)
+      return sortByPartnershipStatus(arePartneredSchools)
   }
+}
+
+function getPartnerships () {
+  const arePartnerships = window.location.href.includes('success-journey')
+
+  return arePartnerships ? partneredSchoolsWithSuccess : partneredSchools
 }
 
 function getSortBy () {
@@ -30,11 +40,11 @@ function getSortBy () {
 }
 
 function sortBySchoolName (rows) {
-  return _.sortBy(rows, row => row.name)
+  return _.sortBy(rows, (row) => row.name)
 }
 
 function sortByPartnershipStatus (rows) {
-  return _.sortBy(rows, row => row.partnershipStatus)
+  return _.sortBy(rows, (row) => row.partnershipStatus)
 }
 
 function sortByDateAdded (rows) {

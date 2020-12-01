@@ -1,17 +1,20 @@
 export const partneredSchools = [
   {
-    name: "school 1",
-    urn: "0000000",
+    name: "Westminster City School",
+    urn: "138312",
     partnershipStatus: "confirmed"
   },
+];
+
+export const partneredSchoolsWithSuccess = [
   {
-    name: "aa school",
-    urn: "0000000",
-    partnershipStatus: "pending"
+    name: 'Corfe Hills School',
+    urn: '123456',
+    partnershipStatus: 'pending',
   },
   {
-    name: "zz school",
-    urn: "0000000",
+    name: "Westminster City School",
+    urn: "138312",
     partnershipStatus: "confirmed"
   },
-]
+];
