@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Add new schools
+{% endblock %}
+
+{% block beforeContent %}
+    {{ govukBackLink({
+        text: "Back",
+        href: "/declare-partnership"
+    }) }}
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">
+                Add new schools
+            </h1>
+            {{ govukWarningText({
+                text: "Only add a new school to this list if they have signed a contract with you.",
+                iconFallbackText: "Warning"
+            }) }}
+            <form action="/declare-partnership/single/failed" method="post" class="form">
+                {{ govukInput({
+                    name: "declare-partnership-school-name",
+                    label: {
+                        text: "School name",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                    }
+                }) }}
+                {{ govukInput({
+                    name: "declare-partnership-school-urn",
+                    label: {
+                        text: "School URN",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                    }
+                }) }}
+                {{ govukInput({
+                    name: "declare-partnership-poc-name",
+                    label: {
+                        text: "Point of contact name",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                    }
+                }) }}
+                {{ govukInput({
+                    name: "declare-partnership-poc-email",
+                    label: {
+                        text: "Point of contact email address",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                    }
+                }) }}
+                <label class="govuk-label govuk-label--s">
+                    Estimated ECTs for 2021
+                </label>
+                <div class="govuk-grid-row">
+                    {{ govukInput({
+                        name: "declare-partnership-ECT-num",
+                        formGroup: { classes: "govuk-grid-column-one-quarter" }
+                    }) }}
+                </div>
+
+                {{ govukRadios({
+                    name: "declare-partnership-dp-name",
+                    fieldset: {
+                        legend: {
+                            text: "Choose delivery partner",
+                            isPageHeading: false,
+                            classes: "govuk-fieldset__legend--s"
+                        }
+                    },
+                    items: [
+                        {
+                            value: "1",
+                            text: "One",
+                            hint: { text: "Details" }
+                        },
+                        {
+                            value: "2",
+                            text: "Two",
+                            hint: { text: "Details" }
+                        },
+                        {
+                            value: "3",
+                            text: "Three",
+                            hint: { text: "Details" }
+                        }
+                    ]
+                }) }}
+                {% block submitButton %}
+                    <button class="govuk-button" data-module="govuk-button">Add school</button>
+                {% endblock %}
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

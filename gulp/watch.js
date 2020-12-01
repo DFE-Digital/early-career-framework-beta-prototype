@@ -27,3 +27,7 @@ gulp.task('watch-assets-v6', function () {
   return gulp.watch([config.paths.v6Assets + 'images/**',
     config.paths.v6Assets + 'javascripts/**'], { cwd: './' }, gulp.task('copy-assets-v6'))
 })
+
+gulp.task('watch-nunjucks', function () {
+  return gulp.watch(config.paths.templates + '/**', { cwd: './' }, gulp.task('nunjucks'))
+})

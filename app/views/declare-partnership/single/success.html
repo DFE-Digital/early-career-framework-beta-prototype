@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Declare a partnership with a school
+{% endblock %}
+
+{% block beforeContent %}
+    {{ govukBackLink({
+        text: "Back",
+        href: "/declare-partnership"
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            {{ govukPanel({
+                titleText: "Upload Successful",
+                html: "Your partnership with " + data["declare-partnership-school-name"] + " has been submitted to DfE"
+            }) }}
+
+            <h2 class="govuk-heading-m">What happens next</h2>
+            <p>The department for Education will now get in contact with this school so that they can confirm your
+                partnership.</p>
+            <p>You can find out whether this schools have confirmed your partnership on
+                <a href="/declare-partnership/multiple/success-journey/supplier-landing">your dashboard</a>.
+                We recommend that you prompt a school if they take more than a week to confirm the relationship.</p>
+
+            <div>
+                {{ govukButton({
+                    text: "Add another school",
+                    href: "./repeat"
+                }) }}
+                <span class="govuk-body govuk-!-margin-left-3">or
+                    <a href="/declare-partnership/multiple/success-journey/supplier-landing">finish adding schools</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

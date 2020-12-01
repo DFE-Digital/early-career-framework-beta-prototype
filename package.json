@@ -33,6 +33,7 @@
     "govuk_template_jinja": "^0.24.1",
     "gulp": "^4.0.0",
     "gulp-nodemon": "^2.5.0",
+    "gulp-nunjucks": "^5.1.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.0",
     "inquirer": "^7.1.0",
@@ -52,6 +53,11 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
     "glob": "^7.1.4",
     "jest": "^25.2.7",
     "node-sass": "^4.14.1",

@@ -1,0 +1,87 @@
+<h2 class="govuk-heading-m">Filter Schools</h2>
+{{ govukButton({
+    text: "Apply filters",
+    name: "apply-school-filters"
+}) }}
+
+{{ govukInput({
+    label: {
+        text: "School name or group",
+        classes: "govuk-label--s",
+        isPageHeading: false
+    },
+    id: "school-name",
+    name: "school-name"
+}) }}
+
+{{ govukInput({
+    label: {
+        text: "Location",
+        classes: "govuk-label--s",
+        isPageHeading: false
+    },
+    hint: {
+        text: "Enter a postcode, town or region"
+    },
+    id: "school-location-name",
+    name: "school-location-name"
+}) }}
+
+<div class="govuk-form-group">
+    <label class="govuk-hint" for="sort">
+        Search distance
+    </label>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+            <select class="govuk-select" id="sort" name="sort" style="width: 100%">
+                <option value="published">50</option>
+            </select>
+        </div>
+        <div class="govuk-grid-column-one-half">
+            <select class="govuk-select" id="sort" name="sort" style="width: 100%">
+                <option value="published">miles</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+{{ govukCheckboxes({
+    idPrefix: "characteristic",
+    name: "characteristic",
+    fieldset: {
+        legend: {
+            text: "Characteristic",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--s"
+        }
+    },
+    items: [
+        {
+            value: "pupil-premium",
+            text: "Pupil premium above 40%"
+        },
+        {
+            value: "rural",
+            text: "Located in top 20% most remote areas"
+        }
+    ]
+}) }}
+
+
+{{ govukCheckboxes({
+    idPrefix: "partnership-status",
+    name: "partnership-status",
+    fieldset: {
+        legend: {
+            text: "Partnership Status",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--s"
+        }
+    },
+    items: [
+        {
+            value: "alreadyPartnered",
+            text: "Show schools partnered with another provider"
+        }
+    ]
+}) }}

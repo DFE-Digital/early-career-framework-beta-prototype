@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="/public/stylesheets/school-search.css"/>
+    <script src="/public/javascripts/nunjucks-slim.min.js"></script>
+    <script src="/public/javascripts/school-search/school-search.js" type="module"></script>
+    <script src="/public/templates/school-results.js"></script>
+{% endblock %}
+
+{% block pageTitle %}
+    Find Schools
+{% endblock %}
+
+{% block beforeContent %}
+    {{ govukPhaseBanner({
+        tag: {
+            text: "prototype"
+        },
+        html: 'This is a new service – your feedback will help us to improve it.'
+    }) }}
+    {{ govukBackLink({
+        text: "Back to dashboard",
+        href: "/supplier-landing"
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+            <h1 class="govuk-heading-xl">Find schools</h1>
+            <p>Use our search and filters to find schools you want to recruit.</p>
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <div style="width: 100%; height: 100%; background-color: #dee0e2; padding: 8px;">
+                {% include "school-search/partials/filter-schools.html" %}
+            </div>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <div id="school-results"></div>
+        </div>
+    </div>
+
+{% endblock %}
