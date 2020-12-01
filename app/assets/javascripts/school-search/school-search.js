@@ -13,6 +13,8 @@ function setupEventListeners () {
     'apply-school-filters'
   )[0]
   applyFiltersButtons.addEventListener('click', applyFiltering)
+  const clearFiltersButton = document.getElementById("clear-filters")
+  clearFiltersButton.addEventListener('click', clearFilters)
 }
 
 function applyFiltering () {
@@ -22,6 +24,14 @@ function applyFiltering () {
     results: schools.length
   })
   document.getElementById('school-results').innerHTML = resultsHtml
+}
+
+function clearFilters(event) {
+  event.preventDefault()
+  document.getElementById('school-name').value = ""
+  Array.from(document.getElementsByName('characteristic')).forEach((box) => box.checked = false)
+  document.getElementById("partnership-status").checked = true
+  applyFiltering()
 }
 
 function filteredSchools () {
