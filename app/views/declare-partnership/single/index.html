@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-    Declare a partnership with a school
+    Add new schools
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,10 +15,10 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-xl">
-                Add new partnerships
+                Add new schools
             </h1>
             {{ govukWarningText({
-                text: "You should only add a school to your list if they have signed a partnership contract with you",
+                text: "Only add a new school to this list if they have signed a contract with you.",
                 iconFallbackText: "Warning"
             }) }}
             <form action="/declare-partnership/single/failed" method="post" class="form">
