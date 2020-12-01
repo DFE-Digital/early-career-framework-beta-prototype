@@ -12,7 +12,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: false,
-    website: "www.example.com"
+    website: "www.corfehills.net"
   },
   {
     urn: '111456',
