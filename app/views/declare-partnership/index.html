@@ -1,7 +1,23 @@
 {% extends "layout.html" %}
 
+
 {% block pageTitle %}
+
+
     Declare a partnership
+{% endblock %}
+
+{% block beforeContent %}
+    {{ govukPhaseBanner({
+        tag: {
+            text: "prototype"
+        },
+        html: 'This is a new service – your feedback will help us to improve it.'
+    }) }}
+    {{ govukBackLink({
+            text: "Back to dashboard",
+            href: "/supplier-landing"
+        }) }}
 {% endblock %}
 
 {% block content %}
@@ -9,17 +25,19 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-xl">
-                Declare a partnership with schools
+                Add partnerships
             </h1>
 
-            <ul class="govuk-list govuk-list--bullet">
-                <li>
-                    <a href="/declare-partnership/single">Single school</a>
-                </li>
-                <li>
-                    <a href="/declare-partnership/multiple">Multiple schools</a>
-                </li>
-            </ul>
+                  <p>There are two ways that you can submit your partnerships to DfE</p>
+
+
+                  <br>
+                  <h2><a href="/declare-partnership/single">Single school</a></h2>
+                  <p>You can add a school partnership one-by-one via an online form</p>
+                  <br>
+                  <h2><a href="/declare-partnership/multiple">Multiple schools</a></h2>
+                  <p>You can upload schools partnerships as a bulk via the spreadsheet was provided in your introductory email</p>
+
         </div>
     </div>
 
