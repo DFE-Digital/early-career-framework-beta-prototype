@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/public/stylesheets/supplier-landing.css"/>
+    <script src="/public/javascripts/your-partnerships/your-partnerships.js" type="module"></script>
+    <script src="/public/templates/partnership-table-rows.js"></script>
+
+    {{ super() }}
+{% endblock %}
+
+{% block pageTitle %}
+    Your partnerships
+{% endblock %}
+
+{% block beforeContent %}
+    {{ govukBackLink({
+        text: "Back",
+        href: "/supplier-landing"
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">
+                Your partnerships
+            </h1>
+
+            <div class="govuk-form-group" style="float: right">
+                <label class="govuk-label govuk-!-display-inline govuk-!-margin-right-4" for="sort">
+                    Order by:
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                    <option value="dateAdded">Newest added</option>
+                    <option value="partnershipStatus">Partnership status</option>
+                    <option value="schoolName" selected>Alphabetically</option>
+                </select>
+            </div>
+
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">School</th>
+                    <th scope="col" class="govuk-table__header">URN</th>
+                    <th scope="col" class="govuk-table__header">Partnership Status</th>
+                </tr>
+                </thead>
+                <tbody class="govuk-table__body" id="partnership-table-body">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
