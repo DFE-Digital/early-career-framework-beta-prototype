@@ -1,4 +1,4 @@
-import { allSchools, allSchoolsWithSuccess } from './data.js';
+import { allMats, allSchools } from './data.js'
 
 const prevOnload = window.onload;
 window.onload = () => {
@@ -16,8 +16,12 @@ function setupEventListeners() {
 }
 
 function applyFiltering() {
+  const schools = filteredSchools()
+  const mats = filteredMats()
   const resultsHtml = window.nunjucks.render('school-results.html', {
-    schools: filteredSchools(),
+    schools: schools,
+    mats: mats,
+    results: schools.length + mats.length
   });
   document.getElementById('school-results').innerHTML = resultsHtml;
 }
@@ -31,15 +35,8 @@ function filteredSchools() {
     schools = filterCharacteristics(schools, getCharacteristics());
   }
 
-  if (getPhases().length > 0) {
-    schools = filterPhase(schools, getPhases());
-  }
-  if (getTypes().length > 0) {
-    schools = filterType(schools, getTypes());
-  }
-
-  if (getStatus().length > 0) {
-    schools = filterPartnershipStatus(schools, getStatus());
+  if (hidePartneredSchools()) {
+    schools = filterPartneredSchools(schools, getStatus());
   }
 
   return schools;
@@ -57,14 +54,6 @@ function getName() {
 
 function getCharacteristics() {
   return checkedBoxes('characteristic');
-}
-
-function getPhases() {
-  return checkedBoxes('phase');
-}
-
-function getTypes() {
-  return checkedBoxes('type');
 }
 
 function getStatus() {
@@ -92,23 +81,27 @@ function filterCharacteristics(schools, characteristics) {
   );
 }
 
-function filterPhase(schools, phase) {
-  return schools.filter((school) => phase.includes(school.phase));
+function filterPartneredSchools(schools) {
+  return schools.filter((school) => !school.alreadyPartnered);
 }
 
-function filterType(schools, type) {
-  return schools.filter((school) => type.includes(school.type));
+function hidePartneredSchools() {
+  return !document.getElementById('partnership-status').checked
 }
 
-function filterPartnershipStatus(schools, statuses) {
-  const showAlreadyPartnered = statuses.includes('alreadyPartnered');
-  const showPendingPartnerships = statuses.includes('partnershipPending');
-  const showConfirmedPartnerships = statuses.includes('partnershipConfirmed');
+function filteredMats () {
+  let mats = allMats
+  if (hidePartneredSchools()) {
+    mats = filterPartneredMats(mats)
+  }
+  if (getName().length > 0) {
+    mats = filterName(mats, getName());
+  }
 
-  return schools.filter(
-    (school) =>
-      (showAlreadyPartnered && school.alreadyPartnered) ||
-      (showPendingPartnerships && school.partnershipPending) ||
-      (showConfirmedPartnerships && school.partnershipConfirmed)
-  );
+  return mats
+}
+
+
+function filterPartneredMats (mats) {
+  return mats.filter(mat => !mat.partnered)
 }
