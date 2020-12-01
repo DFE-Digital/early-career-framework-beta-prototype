@@ -6,7 +6,7 @@
 
 {{ govukInput({
     label: {
-        text: "School name",
+        text: "School name or group",
         classes: "govuk-label--s",
         isPageHeading: false
     },
@@ -78,21 +78,10 @@
             classes: "govuk-fieldset__legend--s"
         }
     },
-    hint: {
-        text: "Select all that apply."
-    },
     items: [
         {
             value: "alreadyPartnered",
-            text: "With other provider"
-        },
-        {
-            value: "partnershipPending",
-            text: "Pending (school to confirm)"
-        },
-        {
-            value: "partnershipConfirmed",
-            text: "Confirmed"
+            text: "Show schools partnered with another provider"
         }
     ]
 }) }}

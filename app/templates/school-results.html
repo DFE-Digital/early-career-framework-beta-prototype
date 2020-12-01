@@ -1,6 +1,8 @@
-{% if schools | length > 0 %}
-    <span class="govuk-body">{{ schools | length }} result(s) found</span>
+{% if results > 0 %}
+    <span class="govuk-body">{{ results }} result(s) found</span>
     <hr/>
+{% else %}
+    <p>No results found</p>
 {% endif %}
 {% for school in schools %}
     <div class="card">
@@ -20,15 +22,15 @@
                     </strong>
                 {% endif %}
                 {% if school.partnershipPending %}
-                <strong class="govuk-tag govuk-tag--yellow tag-right">
-                    Partnership Pending
-                </strong>
+                    <strong class="govuk-tag govuk-tag--yellow tag-right">
+                        Partnership Pending
+                    </strong>
                 {% endif %}
             </div>
         </div>
         <p>{{ school.address }}</p>
         <p>URN: {{ school.urn }}</p>
-        <p>Network: {{  school.network  }}</p>
+        <p>School group: {{ school.network }}</p>
         <p>Phase/Type: {{ school.phaseDisplay }}, {{ school.typeDisplay }}</p>
         {% if school.pupilPremium %}
             <p>Pupil premium above 40%</p>
@@ -38,6 +40,24 @@
         {% endif %}
         <hr/>
     </div>
-{% else %}
-    <p>No results found</p>
+{% endfor %}
+{% for mat in mats %}
+    <div class="card">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+                <h3 class="govuk-heading-m">{{ mat.name }}</h3>
+            </div>
+            <div class="govuk-grid-column-one-half">
+                {% if mat.partnered %}
+                    <strong class="govuk-tag tag-right">
+                        Already partnered
+                    </strong>
+                {% endif %}
+            </div>
+        </div>
+        <p>Group ID: {{ mat.id }}</p>
+        <p>UID: {{ mat.uid }}</p>
+        <p>Number of academies: {{ mat.members }}</p>
+        <hr/>
+    </div>
 {% endfor %}
