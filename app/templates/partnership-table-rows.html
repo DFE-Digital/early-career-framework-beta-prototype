@@ -1,0 +1,18 @@
+{% for row in rows %}
+    <tr class="govuk-table__row">
+        <td class="govuk-table__cell">{{ row.name }}</td>
+        <td class="govuk-table__cell">{{ row.urn }}</td>
+        <td class="govuk-table__cell">
+            {% if row.partnershipStatus == "confirmed" %}
+                <strong class="govuk-tag govuk-tag--green tag-right">
+                    Confirmed
+                </strong>
+            {% endif %}
+            {% if row.partnershipStatus == "pending" %}
+                <strong class="govuk-tag govuk-tag--yellow tag-right">
+                    Pending
+                </strong>
+            {% endif %}
+        </td>
+    </tr>
+{% endfor %}
