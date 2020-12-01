@@ -7,10 +7,11 @@ export const allSchools = [
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy',
+    network: 'Corfe Hills Academy Trust',
     pupilPremium: false,
     rural: false,
     alreadyPartnered: false,
-    partnershipConfirmed: false
+    partnershipConfirmed: false,
   },
   {
     urn: '123456',
@@ -20,10 +21,11 @@ export const allSchools = [
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy',
+    network: 'Corfe Hills Academy Trust',
     pupilPremium: false,
     rural: true,
     alreadyPartnered: false,
-    partnershipConfirmed: false
+    partnershipConfirmed: false,
   },
   {
     urn: '123456',
@@ -33,10 +35,11 @@ export const allSchools = [
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy',
+    network: 'Corfe Hills Academy Trust',
     pupilPremium: true,
     rural: false,
     alreadyPartnered: false,
-    partnershipConfirmed: false
+    partnershipConfirmed: false,
   },
   {
     urn: '123456',
@@ -46,10 +49,11 @@ export const allSchools = [
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy',
+    network: 'Corfe Hills Academy Trust',
     pupilPremium: true,
     rural: true,
     alreadyPartnered: false,
-    partnershipConfirmed: true
+    partnershipConfirmed: true,
   },
   {
     urn: '123456',
@@ -59,10 +63,11 @@ export const allSchools = [
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy',
+    network: 'Corfe Hills Academy Trust',
     pupilPremium: false,
     rural: false,
     alreadyPartnered: true,
-    partnershipConfirmed: false
+    partnershipConfirmed: false,
   },
   {
     urn: '123456',
@@ -72,16 +77,17 @@ export const allSchools = [
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy',
+    network: 'Corfe Hills Academy Trust',
     pupilPremium: false,
     rural: false,
     alreadyPartnered: false,
-    partnershipConfirmed: true
-  }
-]
+    partnershipConfirmed: true,
+  },
+];
 
 export const allMats = [
   {
-    name: 'MAT1',
+    name: 'Corfe Hills Academy Trust',
     id: 'TR1234',
     uid: '123456',
     members: 5,
@@ -106,6 +112,7 @@ export const allSchoolsWithSuccess = [
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy',
+    network: 'Corfe Hills Academy Trust',
     pupilPremium: false,
     rural: false,
     alreadyPartnered: false,
@@ -120,6 +127,7 @@ export const allSchoolsWithSuccess = [
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy',
+    network: 'Corfe Hills Academy Trust',
     pupilPremium: false,
     rural: true,
     alreadyPartnered: false,
@@ -133,6 +141,7 @@ export const allSchoolsWithSuccess = [
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy',
+    network: 'Corfe Hills Academy Trust',
     pupilPremium: true,
     rural: false,
     alreadyPartnered: false,
@@ -146,6 +155,7 @@ export const allSchoolsWithSuccess = [
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy',
+    network: 'Corfe Hills Academy Trust',
     pupilPremium: true,
     rural: true,
     alreadyPartnered: false,
@@ -159,6 +169,7 @@ export const allSchoolsWithSuccess = [
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy',
+    network: 'Corfe Hills Academy Trust',
     pupilPremium: false,
     rural: false,
     alreadyPartnered: true,
@@ -172,6 +183,7 @@ export const allSchoolsWithSuccess = [
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy',
+    network: 'Corfe Hills Academy Trust',
     pupilPremium: false,
     rural: false,
     alreadyPartnered: false,
