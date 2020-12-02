@@ -55,7 +55,7 @@ function sortBySchoolName (rows) {
 }
 
 function sortByPartnershipStatus (rows) {
-  return _.sortBy(rows, (row) => row.partnershipStatus)
+  return _.sortBy(rows, (row) => row.partnershipStatus).reverse()
 }
 
 function sortByDateAdded (rows) {
