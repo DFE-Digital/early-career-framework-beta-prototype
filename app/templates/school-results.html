@@ -1,7 +1,4 @@
-{% if results > 0 %}
-    <span class="govuk-body">{{ results }} result(s) found</span>
-    <hr/>
-{% else %}
+{% if results == 0 %}
     <p>No results found</p>
 {% endif %}
 {% for school in schools %}
