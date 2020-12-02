@@ -14,7 +14,7 @@
 
 {% block beforeContent %}
     {{ govukBackLink({
-        text: "Back",
+        text: "Back to Dashboard",
         href: "/supplier-landing"
     }) }}
 {% endblock %}
@@ -33,7 +33,7 @@
                 </label>
                 <select class="govuk-select" id="sort" name="sort">
                     <option value="dateAdded">Newest added</option>
-                    <option value="partnershipStatus">Partnership status</option>
+                    <option value="partnershipStatus">School status</option>
                     <option value="schoolName" selected>Alphabetically</option>
                 </select>
             </div>
@@ -43,7 +43,7 @@
                 <tr class="govuk-table__row">
                     <th scope="col" class="govuk-table__header">School</th>
                     <th scope="col" class="govuk-table__header">URN</th>
-                    <th scope="col" class="govuk-table__header">Partnership Status</th>
+                    <th scope="col" class="govuk-table__header">School Status</th>
                 </tr>
                 </thead>
                 <tbody class="govuk-table__body" id="partnership-table-body">
