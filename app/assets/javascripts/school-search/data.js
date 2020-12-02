@@ -12,6 +12,7 @@ export const allSchools = [
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: false,
+    website: "www.corfehills.net"
   },
   {
     urn: '111456',
@@ -21,11 +22,12 @@ export const allSchools = [
     phaseDisplay: 'Secondary',
     type: 'other',
     typeDisplay: 'Voluntary aided school',
-    network: 'Corfe Hills Academy Trust',
+    network: 'Congleton Multi-Academy Trust',
     pupilPremium: true,
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: false,
+    website: "www.cncs.co.uk"
   },
   {
     urn: '138562',
@@ -35,53 +37,57 @@ export const allSchools = [
     phaseDisplay: 'Secondary',
     type: 'free-school',
     typeDisplay: 'Free School',
-    network: 'Corfe Hills Academy Trust',
+    network: 'Congleton Multi-Academy Trust',
     pupilPremium: true,
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: false,
+    website: "www.kingswarrington.com"
   },
   {
     urn: '140935',
     name: 'Harris Academy Tottenham',
-    address: 'Ashley Road, Tottenham Hale, London, Not recorded, N17 9LN',
+    address: 'Ashley Road, Tottenham Hale, London, N17 9LN',
     phase: 'middle',
     phaseDisplay: 'Middle',
     type: 'free-school',
     typeDisplay: 'Free school',
-    network: 'Corfe Hills Academy Trust',
+    network: 'Harris Federation',
     pupilPremium: true,
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: true,
+    website: "www.harristottenham.org.uk"
   },
   {
     urn: '138312',
     name: 'Westminster City School',
-    address: '55 Palace Street, London, Not recorded, SW1E 5HJ',
+    address: '55 Palace Street, London, SW1E 5HJ',
     phase: 'secondary',
     phaseDisplay: 'Secondary',
     type: 'academy',
     typeDisplay: 'Academy converter',
-    network: 'Corfe Hills Academy Trust',
+    network: 'Westminster City School',
     pupilPremium: false,
     rural: false,
     alreadyPartnered: true,
     partnershipConfirmed: false,
+    website: "www.wcsch.com"
   },
   {
     urn: '101122',
     name: 'Burdett-Coutts and Townshend Foundation CofE Primary School',
-    address: 'Rochester Street, London, Not recorded, SW1P 2QQ',
+    address: 'Rochester Street, London, SW1P 2QQ',
     phase: 'primary',
     phaseDisplay: 'Primary',
     type: 'other',
     typeDisplay: 'Voluntary aided school',
-    network: 'Corfe Hills Academy Trust',
+    network: 'City of London Academies Trust',
     pupilPremium: false,
     rural: false,
     alreadyPartnered: false,
     partnershipConfirmed: true,
+    website: "burdettcoutts.co.uk"
   },
   {
     urn: '121482',
@@ -91,11 +97,12 @@ export const allSchools = [
     phaseDisplay: 'Primary',
     type: 'other',
     typeDisplay: 'Voluntary controlled school',
-    network: '-',
+    network: 'BAWB Federation',
     pupilPremium: false,
     rural: true,
     alreadyPartnered: false,
     partnershipConfirmed: false,
+    website: "b-a-wb.co.uk"
   },
   {
     urn: '117888',
@@ -105,27 +112,27 @@ export const allSchools = [
     phaseDisplay: 'Primary',
     type: 'other',
     typeDisplay: 'Community school',
-    network: '-',
+    network: 'n/a',
+    pupilPremium: true,
+    rural: true,
+    alreadyPartnered: true,
+    partnershipConfirmed: false,
+    website: "anlabyacreheads.org.uk"
+  },
+
+  {
+    urn: '148012',
+    name: 'Charles Dickens Primary School',
+    address: 'Toulmin Street, London, SE1 1AF',
+    phase: 'primary',
+    phaseDisplay: 'Primary',
+    type: 'other',
+    typeDisplay: 'Community school',
+    network: 'City of London Academies Trust',
     pupilPremium: true,
     rural: true,
     alreadyPartnered: false,
     partnershipConfirmed: false,
+    website: "www.charlesdickens.southwark.sch.uk/"
   },
 ];
-
-export const allMats = [
-  {
-    name: 'Corfe Hills School Academy Trust',
-    id: 'TR00577',
-    uid: '2786',
-    members: 1,
-    partnered: false,
-  },
-  {
-    name: 'Harris Federation',
-    id: 'TR00968',
-    uid: '3320',
-    members: 5,
-    partnered: true
-  }
-]

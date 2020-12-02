@@ -1,8 +1,10 @@
 <h2 class="govuk-heading-m">Filter Schools</h2>
 {{ govukButton({
     text: "Apply filters",
-    name: "apply-school-filters"
+    name: "apply-school-filters",
+    classes: "govuk-!-margin-bottom-2"
 }) }}
+<p><a href="#" id="clear-filters">clear filters</a></p>
 
 {{ govukInput({
     label: {
@@ -81,7 +83,8 @@
     items: [
         {
             value: "alreadyPartnered",
-            text: "Show schools partnered with another provider"
+            text: "Show schools partnered with another provider",
+            checked: true
         }
     ]
 }) }}

@@ -13,7 +13,7 @@
             <div class="govuk-grid-column-one-half">
                 {% if school.alreadyPartnered %}
                     <strong class="govuk-tag tag-right">
-                        Already Partnered
+                        Other provider
                     </strong>
                 {% endif %}
             </div>
@@ -28,26 +28,7 @@
         {% if school.rural %}
             <p>Located in top 20% remotest areas</p>
         {% endif %}
-        <hr/>
-    </div>
-{% endfor %}
-{% for mat in mats %}
-    <div class="card">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
-                <h3 class="govuk-heading-m">{{ mat.name }}</h3>
-            </div>
-            <div class="govuk-grid-column-one-half">
-                {% if mat.partnered %}
-                    <strong class="govuk-tag tag-right">
-                        Already partnered
-                    </strong>
-                {% endif %}
-            </div>
-        </div>
-        <p>Group ID: {{ mat.id }}</p>
-        <p>UID: {{ mat.uid }}</p>
-        <p>Number of academies: {{ mat.members }}</p>
+        <p><a href="https://{{  school.website }}">{{ school.website }}</a></p>
         <hr/>
     </div>
 {% endfor %}

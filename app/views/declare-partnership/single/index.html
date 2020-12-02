@@ -21,7 +21,7 @@
                 text: "Only add a new school to this list if they have signed a contract with you.",
                 iconFallbackText: "Warning"
             }) }}
-            <form action="/declare-partnership/single/failed" method="post" class="form">
+            <form action="/declare-partnership/single/success" method="post" class="form">
                 {{ govukInput({
                     name: "declare-partnership-school-name",
                     label: {
@@ -76,18 +76,43 @@
                     items: [
                         {
                             value: "1",
-                            text: "One",
-                            hint: { text: "Details" }
+                            text: "Cornwall Early Years Teaching School",
+                            hint: { text: "Truro Nursery School, Higher Trehaverne, Truro, Cornwall, TR1 3RJ" }
                         },
                         {
                             value: "2",
-                            text: "Two",
-                            hint: { text: "Details" }
+                            text: "Ambitions Teaching School Bournemouth",
+                            hint: { text: "Petersfield Road, Bournemouth, Dorset. BH7 6QP" }
                         },
                         {
                             value: "3",
-                            text: "Three",
-                            hint: { text: "Details" }
+                            text: "St Matthew's Research School",
+                            hint: { text: "Duddeston Manor Rd, Birmingham B7 4JR" }
+                        },
+                        {
+                            value: "4",
+                            text: "Denbigh Teaching School",
+                            hint: { text: "Burchard Crescent, Shenley Church End, Milton Keynes, MK5 6EX" }
+                        },
+                        {
+                            value: "5",
+                            text: "Copthorne primary school and exceed academies trust",
+                            hint: { text: "All Saints Rd, Bradford BD7 3AY" }
+                        },
+                        {
+                            value: "6",
+                            text: "Eleanor Palmer Primary School",
+                            hint: { text: "5 Pancras Square, Kings Cross, London N1C 4AG" }
+                        },
+                        {
+                            value: "7",
+                            text: "The Peninsula Teaching School",
+                            hint: { text: "Pool Academy, Church Road, Pool, Redruth TR15 3PZ" }
+                        },
+                        {
+                            value: "8",
+                            text: "Lambeth Teaching Schools' Alliance",
+                            hint: { text: "Vauxhall Primary School, Vauxhall St, Vauxhall, London SE11 5LG" }
                         }
                     ]
                 }) }}
