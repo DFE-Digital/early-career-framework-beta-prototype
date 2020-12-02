@@ -1,5 +1,27 @@
 export const partneredSchools = [
   {
+    name: "Westminster City School",
+    urn: "138312",
+    partnershipStatus: "confirmed"
+  },
+];
+
+export const partneredSchoolsForSingleJourney = [
+  {
+    name: 'Corfe Hills School',
+    urn: '123456',
+    partnershipStatus: 'pending',
+  },
+  {
+    name: "Westminster City School",
+    urn: "138312",
+    partnershipStatus: "confirmed"
+  },
+];
+
+
+export const partneredSchoolsForCsvJourney = [
+  {
     name: 'Corfe Hills School',
     urn: '123456',
     partnershipStatus: 'pending',
@@ -59,33 +81,6 @@ export const partneredSchools = [
     partnershipStatus: "pending"
   },
 
-  {
-    name: "Westminster City School",
-    urn: "138312",
-    partnershipStatus: "confirmed"
-  },
-];
-
-export const partneredSchoolsForSingleJourney = [
-  {
-    name: 'Corfe Hills School',
-    urn: '123456',
-    partnershipStatus: 'pending',
-  },
-  {
-    name: "Westminster City School",
-    urn: "138312",
-    partnershipStatus: "confirmed"
-  },
-];
-
-
-export const partneredSchoolsForCsvJourney = [
-  {
-    name: 'Corfe Hills School Csv',
-    urn: '123456',
-    partnershipStatus: 'pending',
-  },
   {
     name: "Westminster City School",
     urn: "138312",
