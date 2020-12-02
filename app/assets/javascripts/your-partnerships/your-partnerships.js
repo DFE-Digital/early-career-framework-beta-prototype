@@ -1,4 +1,4 @@
-import { partneredSchools, partneredSchoolsWithSuccess } from './data.js'
+import { partneredSchools, partneredSchoolsForSingleJourney, partneredSchoolsForCsvJourney } from './data.js'
 
 window.onload = () => {
   setupEventListeners()
@@ -30,9 +30,20 @@ function sortedRows () {
 }
 
 function getPartnerships () {
-  const arePartnerships = window.location.href.includes('success-journey')
+  if (onSingleJourney()) {
+    return partneredSchoolsForSingleJourney
+  } else if (onCsvJourney()) {
+    return partneredSchoolsForCsvJourney
+  }
 
-  return arePartnerships ? partneredSchoolsWithSuccess : partneredSchools
+  return partneredSchools
+}
+
+function onSingleJourney() {
+  return window.location.href.includes('single')
+}
+function onCsvJourney() {
+  return window.location.href.includes('multiple')
 }
 
 function getSortBy () {
