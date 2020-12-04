@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-{{ govukBackLink({
+    {{ govukBackLink({
         text: "Back",
         href: "/declare-partnership/multiple/success-journey/supplier-landing"
     }) }}
@@ -20,112 +20,112 @@
             }) }}
 
             {% set uploadedTable %}
-            {{ govukTable({
-                firstCellIsHeader: false,
-                head: [
-                    {
-                        text: "School name"
-                    },
-                    {
-                        text: "School URN"
-                    }
-                ],
-                rows: [
-                    [
+                {{ govukTable({
+                    firstCellIsHeader: false,
+                    head: [
                         {
-                            text: "Corfe Hills School"
+                            text: "School name"
                         },
                         {
-                            text: "123456"
+                            text: "School URN"
                         }
                     ],
-                    [
-                        {
-                            text: "Broadstone Middle School"
-                        },
-                        {
-                            text: "141184"
-                        }
-                    ],
-                    [
-                        {
-                            text: "Rushmoor School"
-                        },
-                        {
-                            text: "124476"
-                        }
-                    ],
-                    [
-                        {
-                            text: "Rushcombe First School"
-                        },
-                        {
-                            text: "145857"
-                        }
-                    ],
-                    [
-                        {
-                            text: "Lockyers Middle School"
-                        },
-                        {
-                            text: "123456"
-                        }
-                    ],
-                    [
-                        {
-                            text: "Springdale First School"
-                        },
-                        {
-                            text: "529728"
-                        }
-                    ],
-                    [
-                        {
-                            text: "Parkstone Grammar School"
-                        },
-                        {
-                            text: "123456"
-                        }
-                    ],
-                    [
-                        {
-                            text: "Archbishop Tenison's School"
-                        },
-                        {
-                            text: "145857"
-                        }
-                    ],
-                    [
-                        {
-                            text: "Millbank Academy"
-                        },
-                        {
-                            text: "138683"
-                        }
-                    ],
-                    [
-                        {
-                            text: "City of Leeds School"
-                        },
-                        {
-                            text: "127954"
-                        }
+                    rows: [
+                        [
+                            {
+                                text: "Corfe Hills School"
+                            },
+                            {
+                                text: "123456"
+                            }
+                        ],
+                        [
+                            {
+                                text: "Broadstone Middle School"
+                            },
+                            {
+                                text: "141184"
+                            }
+                        ],
+                        [
+                            {
+                                text: "Rushmoor School"
+                            },
+                            {
+                                text: "124476"
+                            }
+                        ],
+                        [
+                            {
+                                text: "Rushcombe First School"
+                            },
+                            {
+                                text: "145857"
+                            }
+                        ],
+                        [
+                            {
+                                text: "Lockyers Middle School"
+                            },
+                            {
+                                text: "123456"
+                            }
+                        ],
+                        [
+                            {
+                                text: "Springdale First School"
+                            },
+                            {
+                                text: "529728"
+                            }
+                        ],
+                        [
+                            {
+                                text: "Parkstone Grammar School"
+                            },
+                            {
+                                text: "123456"
+                            }
+                        ],
+                        [
+                            {
+                                text: "Archbishop Tenison's School"
+                            },
+                            {
+                                text: "145857"
+                            }
+                        ],
+                        [
+                            {
+                                text: "Millbank Academy"
+                            },
+                            {
+                                text: "138683"
+                            }
+                        ],
+                        [
+                            {
+                                text: "City of Leeds School"
+                            },
+                            {
+                                text: "127954"
+                            }
+                        ]
                     ]
-                ]
-            }) }}
+                }) }}
             {% endset -%}
-            
+
             {{ govukDetails({
                 summaryText: "Show all 10 schools",
                 html: uploadedTable
             }) }}
             <h2 class="govuk-heading-m">What happens next</h2>
             <p>DfE will contact these schools to confirm your contract.</p>
-            <p>Your school contracts will update immediately. You will see that schools are confirmed or they are still 'pending' (they need to confirm).
-              We recommend that you remind schools to confirm your contract as soon as possible.
-</p>
+            <p>Your school contracts will update immediately.</p>
+            <p>You will see that schools are confirmed or they are still 'pending' (they need to confirm).</p>
+            <p> We recommend that you remind schools to confirm your contract as soon as possible.</p>
 
-<p><a href="success-journey/your-partnerships">See your school contracts</a></p>
+            <p><a href="success-journey/your-partnerships">See your school contracts</a></p>
         </div>
     </div>
 
